@@ -1,0 +1,38 @@
+# Maven
+target/
+.checkstyle/
+
+# Intellij
+*.iml
+*.log
+.idea/
+
+# Eclipse
+.project
+.classpath
+.springBeans/
+.settings/
+.metadata/
+target-ide/
+.pydevproject
+
+# Scala IDE
+.cache-main
+.cache-tests/
+
+# Misc
+etoil-agences-config/src/main/resources/config/application-DEV.properties
+etoil-agences-config/src/main/resources/config/application-DEV.yml
+web/app/etoil-agences-webapp-devis/overlays/
+web/app/etoil-agences-webapp-materialisation/overlays/
+.attach_pid*
+
+# Sonar
+.sonar
+.sonar_lock
+
+#JRebel
+*rebel.xml
+
+#JMeter
+*Dev.jmx
