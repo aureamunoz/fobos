@@ -27,7 +27,7 @@ a list of hostnames received connections from a given (configurable) host during
 
 The program is called in command line:
 
-   java -jar target/fobos-{version}.jar
+    java -jar target/fobos-{version}.jar
 
 * By default, the file containing the connections lines will be read from _resources/connections-logfile_
 * By default, the generated files containing the statisques of connections will be available in _/tmp_
