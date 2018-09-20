@@ -44,7 +44,7 @@ public class StatsBatch {
 
     public void writeStats() throws ExecutionException {
         try  {
-            String filename = "tmp/fobos-stats-"+ System.currentTimeMillis() + ".txt";
+            String filename = "/tmp/fobos-stats-"+ System.currentTimeMillis() + ".txt";
 
             String content = buildContent();
 
@@ -54,7 +54,6 @@ public class StatsBatch {
 
             outputStream.close();
 
-            System.out.println("Done");
 
         } catch (IOException e) {
 
@@ -70,7 +69,6 @@ public class StatsBatch {
         sb.append(getHostsConnectedFrom());
         sb.append(getHostsConnectedTo());
         sb.append(getHostnameWithMostConnections());
-        System.out.println(sb.toString());
 
         return sb.toString();
     }
@@ -89,7 +87,6 @@ public class StatsBatch {
         sb.append("\n");
         sb.append(String.join(",", hostnames));
         sb.append("\n");
-        System.out.println(sb.toString());
 
         return sb.toString();
     }
@@ -108,7 +105,6 @@ public class StatsBatch {
         sb.append("\n");
         sb.append(String.join(",", hostnames));
         sb.append("\n");
-        System.out.println(sb.toString());
 
         return sb.toString();
     }
@@ -119,24 +115,24 @@ public class StatsBatch {
         Optional<List<HostsConnection>> connectionsTo = cacheByHostTo.asMap().values().stream().max(Comparator.comparingInt(List::size));
         String mostConnectedHostname = "";
 
-
-        if(connectionsFrom.get().size()>connectionsTo.get().size()){
-            mostConnectedHostname = connectionsFrom.get().get(0).getHostFrom();
-        }else if (connectionsFrom.get().size()<connectionsTo.get().size()){
-            mostConnectedHostname = connectionsTo.get().get(0).getHostTo();
-        }else{
-            StringBuilder sbc = new StringBuilder();
-            sbc.append(connectionsFrom.get().get(0).getHostFrom());
-            sbc.append(",");
-            sbc.append(connectionsTo.get().get(0).getHostTo());
-            mostConnectedHostname = sbc.toString();
+        if(!connectionsFrom.get().isEmpty() && !connectionsTo.get().isEmpty()) {
+            if (connectionsFrom.get().size() > connectionsTo.get().size()) {
+                mostConnectedHostname = connectionsFrom.get().get(0).getHostFrom();
+            } else if (connectionsFrom.get().size() < connectionsTo.get().size()) {
+                mostConnectedHostname = connectionsTo.get().get(0).getHostTo();
+            } else {
+                StringBuilder sbc = new StringBuilder();
+                sbc.append(connectionsFrom.get().get(0).getHostFrom());
+                sbc.append(",");
+                sbc.append(connectionsTo.get().get(0).getHostTo());
+                mostConnectedHostname = sbc.toString();
+            }
         }
 
         StringBuilder sb = new StringBuilder();
         sb.append("\n[the hostname that generated most connections in the last hour]\n");
         sb.append(mostConnectedHostname);
         sb.append("\n");
-        System.out.println(sb.toString());
 
         return sb.toString();
 

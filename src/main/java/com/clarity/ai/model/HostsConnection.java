@@ -1,7 +1,5 @@
 package com.clarity.ai.model;
 
-import com.clarity.ai.service.LogParser;
-
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -56,8 +54,4 @@ public class HostsConnection {
         return Objects.hash(connectionDateTime,hostFrom,hostTo);
     }
 
-    @Override
-    public String toString(){
-        return connectionDateTime.format(LogParser.DTF_DATETIME) + " " + hostFrom + " " + hostTo;
-    }
 }
