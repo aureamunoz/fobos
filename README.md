@@ -22,9 +22,17 @@ The logfile is supposed to exist in _/tmp/log_
 
 ###How to use :
 
+    git clone https://github.com/aureamunoz/fobos.git
+
+    cd fobos
+
+    mvn clean package
+
 The program is called in command line:
 
     java -jar target/fobos-{version}.jar
+or
+    mvn spring-boot:run
 
 * By default, the generated files containing the statisques of connections will be available in _/tmp_
 
