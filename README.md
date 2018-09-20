@@ -30,6 +30,7 @@ The program is called in command line:
 
 
 ** Mejoras
+Implementar la lectura del fichero en tiempo real.
 Optimizar la cache usando otra persistente, tipo redis.
 Para optimizar los accesos y la memoria usada podría reflexionar más sobre el tipo de datos almacenado en la cache,
 utilizando alguna forma más compacta. Ademas usando librerias como fastutil se consiguen accesos más rápidos.
