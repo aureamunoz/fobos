@@ -40,3 +40,4 @@ utilizando alguna forma más compacta. Ademas usando librerias como fastutil se 
 Añadir test unitarios/integración
 Añadir log4j para tener trazas sobre el funcionamiento del programa.
 Encapsular los servicios añadiendo interfaces.
+Gestion de errores
