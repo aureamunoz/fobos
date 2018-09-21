@@ -17,10 +17,10 @@ The script will output, once every hour:
 a list of hostnames connected to a given (configurable) host during the last hour
 a list of hostnames received connections from a given (configurable) host during the last hour the hostname that generated most connections in the last hour
 
-###Prerequisites
+### Prerequisites
 The logfile is supposed to exist in _/tmp/log_
 
-###How to use :
+### How to use :
 
     git clone https://github.com/aureamunoz/fobos.git
 
@@ -43,7 +43,7 @@ or
     * **fobos.stats.cron** *(Ex :fobos.stats.cron=0/5 * * * * ?)*
 
 
-** Mejoras/Notas
+### Mejoras/Notas
 Implementar la lectura del fichero en tiempo real: in progress. No consigo leer las líneas añadidas al fichero una
 vez el programa está corriendo. He probado varias estrategias y no funcionan, sigo mirando (por curiosidad) qué es lo
 que bloquea.
