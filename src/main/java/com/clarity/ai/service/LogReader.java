@@ -1,7 +1,7 @@
 package com.clarity.ai.service;
 
 /**
- * A simple java interface that read data from a log file input source
+ * A simple java interface that reads data from a log file input source
  */
 
 public interface LogReader {
