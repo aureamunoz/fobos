@@ -40,7 +40,7 @@ or
 * The hosts to monitore for stats are specified by keys bellow:
     * **fobos.stats.to.hostname** *(Ex : fobos.stats.to.hostname=quark)*
     * **fobos.stats.from.hostname** *(Ex : fobos.stats.from.hostname=lilac)*
-    * **fobos.stats.cron=0/5 * * * * ?** *(Ex :fobos.stats.cron=0/5 * * * * ?)*
+    * **fobos.stats.cron** *(Ex :fobos.stats.cron=0/5 * * * * ?)*
 
 
 ** Mejoras/Notas
