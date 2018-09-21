@@ -44,16 +44,17 @@ or
 
 
 ### Mejoras/Notas
-Implementar la lectura del fichero en tiempo real: in progress. No consigo leer las líneas añadidas al fichero una
+* Implementar la lectura del fichero en tiempo real: in progress. No consigo leer las líneas añadidas al fichero una
 vez el programa está corriendo. He probado varias estrategias y no funcionan, sigo mirando (por curiosidad) qué es lo
 que bloquea.
-Implementar filtro sobre las fechas de los mensajes.
-Optimizar la cache usando otra persistente, tipo redis.
-Afinar el tamaño de la cache en función de la velocidad a la que llegan los datos de conexiones entre hosts.
-Para optimizar los accesos y la memoria usada podría reflexionar más sobre el tipo de datos almacenado en la cache,
+* Implementar filtro sobre las fechas de los mensajes.
+* Optimizar la cache usando otra persistente, tipo redis.
+* Afinar el tamaño de la cache en función de la velocidad a la que llegan los datos de conexiones entre hosts.
+* Para optimizar los accesos y la memoria usada podría reflexionar más sobre el tipo de datos almacenado en la cache,
 utilizando alguna forma más compacta. Ademas usando librerias como fastutil se consiguen accesos más rápidos.
-Añadir test unitarios/integración
-Añadir log4j para tener trazas sobre el funcionamiento de la aplicación.
-Más javadoc
-Gestion de errores
-Tests, tests, tests
+* Añadir test unitarios/integración
+* Hacer tests de performance
+* Añadir log4j para tener trazas sobre el funcionamiento de la aplicación.
+* Más javadoc
+* Gestion de errores
+* Tests, tests, tests
