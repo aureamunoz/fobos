@@ -5,6 +5,7 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.Collections;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Configuration
+@ComponentScan(basePackages = "com.clarity.ai")
 public class FobosConfiguration {
 
 

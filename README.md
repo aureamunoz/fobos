@@ -35,15 +35,25 @@ or
     mvn spring-boot:run
 
 * By default, the generated files containing the statisques of connections will be available in _/tmp_
+* By default, the stats are generated once every hour
+
+* The hosts to monitore for stats are specified by keys bellow:
+    * **fobos.stats.to.hostname** *(Ex : fobos.stats.to.hostname=quark)*
+    * **fobos.stats.from.hostname** *(Ex : fobos.stats.from.hostname=lilac)*
+    * **fobos.stats.cron=0/5 * * * * ?** *(Ex :fobos.stats.cron=0/5 * * * * ?)*
 
 
-** Mejoras
-Implementar la lectura del fichero en tiempo real.
+** Mejoras/Notas
+Implementar la lectura del fichero en tiempo real: in progress. No consigo leer las líneas añadidas al fichero una
+vez el programa está corriendo. He probado varias estrategias y no funcionan, sigo mirando (por curiosidad) qué es lo
+que bloquea.
+Implementar filtro sobre las fechas de los mensajes.
 Optimizar la cache usando otra persistente, tipo redis.
+Afinar el tamaño de la cache en función de la velocidad a la que llegan los datos de conexiones entre hosts.
 Para optimizar los accesos y la memoria usada podría reflexionar más sobre el tipo de datos almacenado en la cache,
 utilizando alguna forma más compacta. Ademas usando librerias como fastutil se consiguen accesos más rápidos.
 Añadir test unitarios/integración
 Añadir log4j para tener trazas sobre el funcionamiento de la aplicación.
-Encapsular los servicios añadiendo interfaces.
+Más javadoc
 Gestion de errores
 Tests, tests, tests

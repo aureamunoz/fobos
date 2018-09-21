@@ -6,21 +6,19 @@ import org.springframework.stereotype.Component;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 import java.util.StringTokenizer;
 import java.util.TimeZone;
 
 @Component
-public class LogParser {
+public class LineParserImpl implements LineParser{
 
     private static final java.lang.String DATETIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
-    public static final DateTimeFormatter DTF_DATETIME = DateTimeFormatter.ofPattern(DATETIME_PATTERN);
-
 
     @Autowired
     private CacheService cacheService;
 
+    @Override
     public Optional<HostsConnection> parseLine(String line) {
         if (line != null && !line.isEmpty()) {
             StringTokenizer st = new StringTokenizer(line);

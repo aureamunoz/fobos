@@ -34,7 +34,7 @@ public class StatsBatch {
 
 
 
-    @Scheduled(cron = "${fobos.stats.cron}")
+    @Scheduled(cron = "${fobos.stats.cron:0 0/1 * * * ?}")
     public void generateStats() throws ExecutionException {
         System.out.println(" --------------- from stats --------------------\n");
         writeStats();
