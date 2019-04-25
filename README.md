@@ -57,4 +57,4 @@ utilizando alguna forma más compacta. Ademas usando librerias como fastutil se 
 * Añadir log4j para tener trazas sobre el funcionamiento de la aplicación.
 * Más javadoc
 * Gestion de errores
-* Tests, tests, tests
+* Tests y más tests
